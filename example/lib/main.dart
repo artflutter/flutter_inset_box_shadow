@@ -16,28 +16,34 @@ class ExampleApp extends StatelessWidget {
       title: 'Example',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: primaryColor,
+        backgroundColor: Color(0xFFf5deb3),
         body: Center(
           child: Container(
-            width: 150,
-            height: 150,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(50),
-              color: primaryColor,
-              boxShadow: const [
-                BoxShadow(
-                  offset: Offset(-20, -20),
-                  blurRadius: 60,
-                  color: Colors.white,
-                  inset: true,
+            margin: EdgeInsets.symmetric(horizontal: 16),
+            color: Colors.white,
+            // color: Color(0xFF1A212A),
+            height: 250,
+            child: Container(
+              margin: EdgeInsets.only(top: 100),
+              width: double.infinity,
+              height: 150,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(16),
+                  topRight: Radius.circular(16),
                 ),
-                BoxShadow(
-                  offset: Offset(20, 20),
-                  blurRadius: 60,
-                  color: Color(0xFFBEBEBE),
-                  inset: true,
-                ),
-              ],
+                color: Colors.white,
+                // color: Color(0xFF1A212A),
+                boxShadow: [
+                  BoxShadow(
+                    offset: const Offset(0, 12),
+                    blurRadius: 16,
+                    color: Colors.black.withOpacity(0.08),
+                    spreadRadius: -6,
+                    inset: true,
+                  ),
+                ],
+              ),
             ),
           ),
         ),
